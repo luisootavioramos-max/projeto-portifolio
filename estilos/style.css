@@ -15,6 +15,15 @@
     --fundo-cards: #ffffff;
 }
 
+.dark {
+    --fundo-principal: #222222;
+    --texto: #ffffff;
+    --texto-inverso: #222222;
+    --destaque: #F2BC57;
+    --destaque-inverso: #D9831A;
+    --fundo-cards: #333333;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
@@ -30,6 +39,9 @@ header {
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav#menu ul {
@@ -260,6 +272,25 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+    main{
+        grid-template-columns: auto 300px 1fr auto;
+
+
+    }
+
+    section#ficha{
+        grid-column: 2 / 3;
+        height: fit-content;
+        position: sticky;
+        top: 65px;
+    }
+
+    section#detalhes{
+        grid-column: 3 / 4;
+    }
+
+
     #skill-container{
         grid-template-columns: repeat(2, 1fr);
     }
