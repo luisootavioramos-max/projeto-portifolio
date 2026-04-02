@@ -263,6 +263,37 @@ article h2{
     border-radius: 8px;
 }
 
+.certificado-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certificado-container .certificado{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--fundo-principal);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--destaque-inverso);
+    transition: border-color 0.5s, border-width 0.5s;
+}
+
+.certificado-container .certificado:hover{
+    border-color: var(--destaque);
+    border-left-width: 15px;
+    cursor: pointer;
+}
+
+.certificado-container .foto{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 footer {
     background-color: var(--destaque);
     color: var(--texto-inverso);
@@ -305,6 +336,21 @@ footer {
     }
 
     .projeto-container .foto{
+        aspect-ratio: 1/1;
+        width: 400px;
+        height: 400px;
+    }
+
+    .certificado-container .certificado{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .certificado-container .certificado-info{
+        max-width: 80%;
+    }
+
+    .certificado-container .foto{
         aspect-ratio: 1/1;
         width: 400px;
         height: 400px;
